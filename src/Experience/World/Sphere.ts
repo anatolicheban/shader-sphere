@@ -54,7 +54,7 @@ export class Sphere extends Mesh<BufferGeometry, MeshStandardMaterial> {
     this.experience.time.addHandler("tick", () => {
       this.material.userData.shader &&
         (this.material.userData.shader.uniforms.uTime = {
-          value: Math.abs(Math.sin(this.experience.time.elapsed / 1000)),
+          value: Math.sin(this.experience.time.elapsed / 1000),
         });
     });
   }
